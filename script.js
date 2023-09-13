@@ -204,7 +204,7 @@ function mostrarAlertaEntrada() {
   
     async function show() {
       var firstRun = true;
-      var dataResult = { "results": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] };
+      var dataResult = { "results": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] };
       var resultadosAnteriores = [];
     
       while (true) {
