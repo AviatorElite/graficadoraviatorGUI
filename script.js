@@ -196,7 +196,7 @@ function mostrarAlertaEntrada() {
   
   setTimeout(() => {
     alertaEntradaElement.style.display = 'none'; // Ocultar la alerta después de 5 segundos
-  }, 50000);
+  }, 10000);
 }
 
   
