@@ -1,0 +1,143 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#graficador {
+  width: 850px; /* Ancho cuadrado */
+  height: 500px; /* Altura cuadrada */
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  border-radius: 0; /* Sin bordes redondos */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada y oscura */
+  overflow: hidden;
+  position: fixed; /* Establecer posición fija */
+  top: 20px; /* Alineado en la parte superior */
+  right: 380px; /* Alineado en la parte derecha */
+  z-index: 999; /* Capa superior para que esté por encima de otros elementos */
+}
+
+#graficador::before, #graficador::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3); /* Líneas más transparentes */
+  animation: blink 60s infinite alternate;
+}
+
+#graficador::before {
+  top: 0;
+}
+
+#graficador::after {
+  bottom: 0;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+canvas {
+  width: 100%;
+  height: 300px; /* Un poco más alto */
+}
+
+.linea-horizontal {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(13, 194, 37, 0.8); /* Color con efecto de neón */
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(13, 194, 37, 0.8); /* Efecto de neón */
+}
+
+
+
+.valor-especial {
+  padding: 4px 14px;
+  border-radius: 11px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 5px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(7, 6, 4, 0.7));
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  color: #ffffff; /* Color de texto */
+}
+
+.alerta-entrada {
+  background: linear-gradient(135deg, #0bca2b, #0bca2b);
+  color: #000000; /* Texto en blanco para mejor legibilidad */
+  text-align: center;
+  padding: 20px;
+  display: none;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  border: 2px solid #1a1a1a;
+}
+
+.alerta-entrada::before {
+  content: "💎";
+  font-size: 55px;
+  display: block;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.alerta-entrada h3 {
+  font-size: 32px; /* Tamaño de fuente del título */
+  margin: 0;
+  color: #1a1a1a;
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.alerta-entrada p {
+  font-size: 20px; /* Tamaño de fuente del texto */
+  margin: 20px 0;
+  line-height: 1.4; /* Espaciado de línea mejorado */
+}
+
+.alerta-entrada button {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Espaciado alrededor del botón */
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.alerta-entrada button:hover {
+  background: #333; /* Cambio de color al pasar el cursor */
+}
+
+
+.resultado-api {
+  background-color: white; /* Color de fondo blanco */
+  padding: 10px; /* Espaciado interior */
+  border: 2px solid rgba(0, 0, 0, 0.3); /* Borde de 2px con transparencia */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-top: 10px; /* Espacio superior */
+  max-height: 200px; /* Altura máxima para hacer que se desplace si es necesario */
+  overflow-y: auto; /* Agregar desplazamiento vertical si es necesario */
+}
+
+
