@@ -11,15 +11,15 @@ body {
 }
 
 #graficador {
-  width: 850px; /* Ancho cuadrado */
-  height: 500px; /* Altura cuadrada */
+  width: 100%; /* Ancho del 100% para adaptarse a la pantalla */
+  height: 100vh; /* Altura del 100% de la ventana */
   background: linear-gradient(135deg, #000, #1a1a1a);
   border-radius: 0; /* Sin bordes redondos */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada y oscura */
   overflow: hidden;
   position: fixed; /* Establecer posición fija */
-  top: 20px; /* Alineado en la parte superior */
-  right: 380px; /* Alineado en la parte derecha */
+  top: 0; /* Alineado en la parte superior */
+  left: 0; /* Alineado en la parte izquierda */
   z-index: 999; /* Capa superior para que esté por encima de otros elementos */
 }
 
