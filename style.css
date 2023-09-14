@@ -11,17 +11,18 @@ body {
 }
 
 #graficador {
-  width: 100%; /* Ancho del 100% para adaptarse a la pantalla */
-  height: 100vh; /* Altura del 100% de la ventana */
+  width: 1450px; /* Ancho cuadrado */
+  height: 820px; /* Altura cuadrada */
   background: linear-gradient(135deg, #000, #1a1a1a);
   border-radius: 0; /* Sin bordes redondos */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada y oscura */
   overflow: hidden;
   position: fixed; /* Establecer posición fija */
-  top: 0; /* Alineado en la parte superior */
-  left: 0; /* Alineado en la parte izquierda */
+  top: 0px; /* Alineado en la parte superior */
+  right: 100px; /* Alineado en la parte derecha */
   z-index: 999; /* Capa superior para que esté por encima de otros elementos */
 }
+
 
 #graficador::before, #graficador::after {
   content: '';
