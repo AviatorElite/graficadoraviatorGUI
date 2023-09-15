@@ -100,7 +100,7 @@ containerBody.style.width=ancho+"px"
 function moverLinea(delta, rosa) {
   totallabels = chart.data.labels.length
 
-  if (totallabels > 15) {
+  if (totallabels > 35) {
     const newWidth = 800 + ((totallabels - 7) * 30)
     ancho=ancho+50
     containerBody.style.width = ancho+"px"
