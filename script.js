@@ -94,14 +94,14 @@ if(totallabels > 7){
 
 const containerBody = document.querySelector(".containerBody")
 totallabels = chart.data.labels.length
-ancho=850
+ancho=800
 containerBody.style.width=ancho+"px"
 
 function moverLinea(delta, rosa) {
   totallabels = chart.data.labels.length
 
-  if (totallabels > 7) {
-    const newWidth = 700 + ((totallabels - 7) * 30)
+  if (totallabels > 15) {
+    const newWidth = 800 + ((totallabels - 7) * 30)
     ancho=ancho+50
     containerBody.style.width = ancho+"px"
     containerBody.scrollIntoView({behavior: 'smooth', inline: 'end'});
