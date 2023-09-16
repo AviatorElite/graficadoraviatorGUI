@@ -11,17 +11,18 @@ body {
 }
 
 #graficador {
-  width: 800px; /* Ancho cuadrado */
-  height: 600px; /* Altura cuadrada */
+  width: 100%; /* Ancho 100% para que sea igual al ancho de la pantalla */
+  height: 100vh; /* Alto 100% del viewport (ventana del navegador) */
   background: linear-gradient(135deg, #000, #1a1a1a);
   border-radius: 0; /* Sin bordes redondos */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada y oscura */
   overflow: hidden;
   position: fixed; /* Establecer posición fija */
-  top: 20px; /* Alineado en la parte superior */
-  right: 400px; /* Alineado en la parte derecha */
+  top: 0; /* Alineado en la parte superior */
+  right: 0; /* Alineado en la parte derecha */
   z-index: 999; /* Capa superior para que esté por encima de otros elementos */
 }
+
 
 #graficador::before, #graficador::after {
   content: '';
@@ -140,16 +141,4 @@ canvas {
   overflow-y: auto; /* Agregar desplazamiento vertical si es necesario */
 }
 
-.container{
-  height: 84%;
-  width: 100%;
-  overflow-x: scroll;
-}
 
-.containerBody{
-  height: 100%;
-}
-
-.containerBody{
-  height: 100%;
-}
