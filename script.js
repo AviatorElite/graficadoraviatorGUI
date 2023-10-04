@@ -119,7 +119,7 @@
     chart.update();
   }
   
-  var urlBase = "https://aviatornetwork-aviatornetwork.vercel.app/";
+  var urlBase = "http://52.67.35.75:5000/result";
   
   function checkList(listOne, listTwo) {
     for (let index = 0; index < listOne.length; index++) {
